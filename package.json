@@ -4,6 +4,7 @@
   "description": "APIs repo",
   "main": "index.js",
   "scripts": {
+    "debug": "nodemon --exec \"node --inspect-brk=0.0.0.0:9229 --require ts-node/register src/app.ts\"",
     "start": "ts-node src/index.ts",
     "build": "tsc",
     "serve": "node dist/index.js"
@@ -17,7 +18,9 @@
     "express": "^4.18.2",
     "jsonwebtoken": "^9.0.2",
     "lodash": "^4.17.21",
-    "luxon": "^3.4.4"
+    "luxon": "^3.4.4",
+    "nodemon": "^3.1.0",
+    "tsconfig-paths": "^4.2.0"
   },
   "devDependencies": {
     "@aws-amplify/backend": "^1.0.1",
@@ -29,7 +32,6 @@
     "aws-cdk-lib": "^2.141.0",
     "constructs": "^10.3.0",
     "esbuild": "^0.21.2",
-    "nodemon": "^3.1.0",
     "ts-node": "^10.9.2",
     "tsx": "^4.10.1",
     "typescript": "^5.4.5"

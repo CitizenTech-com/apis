@@ -2,17 +2,17 @@
 /* eslint-disable */
 // this is an auto generated file. This will be overwritten
 
-import * as APITypes from "../../awsAPIs";
+import * as APITypes from "../awsAPIs";
 type GeneratedSubscription<InputType, OutputType> = string & {
   __generatedSubscriptionInput: InputType;
   __generatedSubscriptionOutput: OutputType;
 };
 
-export const onCreateUsers = /* GraphQL */ `subscription OnCreateUsers(
-  $filter: ModelSubscriptionUsersFilterInput
+export const onCreateMember = /* GraphQL */ `subscription OnCreateMember(
+  $filter: ModelSubscriptionMemberFilterInput
   $owner: String
 ) {
-  onCreateUsers(filter: $filter, owner: $owner) {
+  onCreateMember(filter: $filter, owner: $owner) {
     id
     name
     createdAt
@@ -22,14 +22,14 @@ export const onCreateUsers = /* GraphQL */ `subscription OnCreateUsers(
   }
 }
 ` as GeneratedSubscription<
-  APITypes.OnCreateUsersSubscriptionVariables,
-  APITypes.OnCreateUsersSubscription
+  APITypes.OnCreateMemberSubscriptionVariables,
+  APITypes.OnCreateMemberSubscription
 >;
-export const onUpdateUsers = /* GraphQL */ `subscription OnUpdateUsers(
-  $filter: ModelSubscriptionUsersFilterInput
+export const onUpdateMember = /* GraphQL */ `subscription OnUpdateMember(
+  $filter: ModelSubscriptionMemberFilterInput
   $owner: String
 ) {
-  onUpdateUsers(filter: $filter, owner: $owner) {
+  onUpdateMember(filter: $filter, owner: $owner) {
     id
     name
     createdAt
@@ -39,14 +39,14 @@ export const onUpdateUsers = /* GraphQL */ `subscription OnUpdateUsers(
   }
 }
 ` as GeneratedSubscription<
-  APITypes.OnUpdateUsersSubscriptionVariables,
-  APITypes.OnUpdateUsersSubscription
+  APITypes.OnUpdateMemberSubscriptionVariables,
+  APITypes.OnUpdateMemberSubscription
 >;
-export const onDeleteUsers = /* GraphQL */ `subscription OnDeleteUsers(
-  $filter: ModelSubscriptionUsersFilterInput
+export const onDeleteMember = /* GraphQL */ `subscription OnDeleteMember(
+  $filter: ModelSubscriptionMemberFilterInput
   $owner: String
 ) {
-  onDeleteUsers(filter: $filter, owner: $owner) {
+  onDeleteMember(filter: $filter, owner: $owner) {
     id
     name
     createdAt
@@ -56,6 +56,6 @@ export const onDeleteUsers = /* GraphQL */ `subscription OnDeleteUsers(
   }
 }
 ` as GeneratedSubscription<
-  APITypes.OnDeleteUsersSubscriptionVariables,
-  APITypes.OnDeleteUsersSubscription
+  APITypes.OnDeleteMemberSubscriptionVariables,
+  APITypes.OnDeleteMemberSubscription
 >;

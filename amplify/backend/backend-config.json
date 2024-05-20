@@ -37,5 +37,39 @@
       "service": "Cognito",
       "serviceType": "imported"
     }
+  },
+  "parameters": {
+    "AMPLIFY_auth_apis_nativeClientId": {
+      "usedBy": [
+        {
+          "category": "auth",
+          "resourceName": "apis"
+        }
+      ]
+    },
+    "AMPLIFY_auth_apis_userPoolId": {
+      "usedBy": [
+        {
+          "category": "auth",
+          "resourceName": "apis"
+        }
+      ]
+    },
+    "AMPLIFY_auth_apis_userPoolName": {
+      "usedBy": [
+        {
+          "category": "auth",
+          "resourceName": "apis"
+        }
+      ]
+    },
+    "AMPLIFY_auth_apis_webClientId": {
+      "usedBy": [
+        {
+          "category": "auth",
+          "resourceName": "apis"
+        }
+      ]
+    }
   }
 }

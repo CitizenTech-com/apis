@@ -13,7 +13,12 @@
     },
     "categories": {
       "auth": {
-        "apis": {}
+        "apis": {
+          "userPoolId": "eu-west-2_7tQGZkrBW",
+          "userPoolName": "CTZENTECH-USERPOOL",
+          "webClientId": "71hu2ik70sm6jv1dq11fbh2dut",
+          "nativeClientId": "71hu2ik70sm6jv1dq11fbh2dut"
+        }
       }
     }
   }

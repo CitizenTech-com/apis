@@ -2,14 +2,14 @@
 /* eslint-disable */
 // this is an auto generated file. This will be overwritten
 
-import * as APITypes from "../../awsAPIs";
+import * as APITypes from "../awsAPIs";
 type GeneratedQuery<InputType, OutputType> = string & {
   __generatedQueryInput: InputType;
   __generatedQueryOutput: OutputType;
 };
 
-export const getUsers = /* GraphQL */ `query GetUsers($id: ID!) {
-  getUsers(id: $id) {
+export const getMember = /* GraphQL */ `query GetMember($id: ID!) {
+  getMember(id: $id) {
     id
     name
     createdAt
@@ -18,13 +18,13 @@ export const getUsers = /* GraphQL */ `query GetUsers($id: ID!) {
     __typename
   }
 }
-` as GeneratedQuery<APITypes.GetUsersQueryVariables, APITypes.GetUsersQuery>;
-export const listUsers = /* GraphQL */ `query ListUsers(
-  $filter: ModelUsersFilterInput
+` as GeneratedQuery<APITypes.GetMemberQueryVariables, APITypes.GetMemberQuery>;
+export const listMembers = /* GraphQL */ `query ListMembers(
+  $filter: ModelMemberFilterInput
   $limit: Int
   $nextToken: String
 ) {
-  listUsers(filter: $filter, limit: $limit, nextToken: $nextToken) {
+  listMembers(filter: $filter, limit: $limit, nextToken: $nextToken) {
     items {
       id
       name
@@ -37,4 +37,7 @@ export const listUsers = /* GraphQL */ `query ListUsers(
     __typename
   }
 }
-` as GeneratedQuery<APITypes.ListUsersQueryVariables, APITypes.ListUsersQuery>;
+` as GeneratedQuery<
+  APITypes.ListMembersQueryVariables,
+  APITypes.ListMembersQuery
+>;

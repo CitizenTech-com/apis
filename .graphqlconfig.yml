@@ -9,8 +9,11 @@ projects:
     extensions:
       amplify:
         codeGenTarget: typescript
-        generatedFileName: awsAPIs.ts
+        generatedFileName: src/awsAPIs.ts
         docsFilePath: src/graphql
         region: eu-west-2
         apiId: null
         maxDepth: 2
+extensions:
+  amplify:
+    version: 3

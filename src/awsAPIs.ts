@@ -2,16 +2,16 @@
 /* eslint-disable */
 //  This file was automatically generated and should not be edited.
 
-export type CreateUsersInput = {
+export type CreateMemberInput = {
   id?: string | null,
   name: string,
 };
 
-export type ModelUsersConditionInput = {
+export type ModelMemberConditionInput = {
   name?: ModelStringInput | null,
-  and?: Array< ModelUsersConditionInput | null > | null,
-  or?: Array< ModelUsersConditionInput | null > | null,
-  not?: ModelUsersConditionInput | null,
+  and?: Array< ModelMemberConditionInput | null > | null,
+  or?: Array< ModelMemberConditionInput | null > | null,
+  not?: ModelMemberConditionInput | null,
   createdAt?: ModelStringInput | null,
   updatedAt?: ModelStringInput | null,
   owner?: ModelStringInput | null,
@@ -57,8 +57,8 @@ export type ModelSizeInput = {
   between?: Array< number | null > | null,
 };
 
-export type Users = {
-  __typename: "Users",
+export type Member = {
+  __typename: "Member",
   id: string,
   name: string,
   createdAt: string,
@@ -66,23 +66,23 @@ export type Users = {
   owner?: string | null,
 };
 
-export type UpdateUsersInput = {
+export type UpdateMemberInput = {
   id: string,
   name?: string | null,
 };
 
-export type DeleteUsersInput = {
+export type DeleteMemberInput = {
   id: string,
 };
 
-export type ModelUsersFilterInput = {
+export type ModelMemberFilterInput = {
   id?: ModelIDInput | null,
   name?: ModelStringInput | null,
   createdAt?: ModelStringInput | null,
   updatedAt?: ModelStringInput | null,
-  and?: Array< ModelUsersFilterInput | null > | null,
-  or?: Array< ModelUsersFilterInput | null > | null,
-  not?: ModelUsersFilterInput | null,
+  and?: Array< ModelMemberFilterInput | null > | null,
+  or?: Array< ModelMemberFilterInput | null > | null,
+  not?: ModelMemberFilterInput | null,
   owner?: ModelStringInput | null,
 };
 
@@ -102,19 +102,19 @@ export type ModelIDInput = {
   size?: ModelSizeInput | null,
 };
 
-export type ModelUsersConnection = {
-  __typename: "ModelUsersConnection",
-  items:  Array<Users | null >,
+export type ModelMemberConnection = {
+  __typename: "ModelMemberConnection",
+  items:  Array<Member | null >,
   nextToken?: string | null,
 };
 
-export type ModelSubscriptionUsersFilterInput = {
+export type ModelSubscriptionMemberFilterInput = {
   id?: ModelSubscriptionIDInput | null,
   name?: ModelSubscriptionStringInput | null,
   createdAt?: ModelSubscriptionStringInput | null,
   updatedAt?: ModelSubscriptionStringInput | null,
-  and?: Array< ModelSubscriptionUsersFilterInput | null > | null,
-  or?: Array< ModelSubscriptionUsersFilterInput | null > | null,
+  and?: Array< ModelSubscriptionMemberFilterInput | null > | null,
+  or?: Array< ModelSubscriptionMemberFilterInput | null > | null,
   owner?: ModelStringInput | null,
 };
 
@@ -148,14 +148,14 @@ export type ModelSubscriptionStringInput = {
   notIn?: Array< string | null > | null,
 };
 
-export type CreateUsersMutationVariables = {
-  input: CreateUsersInput,
-  condition?: ModelUsersConditionInput | null,
+export type CreateMemberMutationVariables = {
+  input: CreateMemberInput,
+  condition?: ModelMemberConditionInput | null,
 };
 
-export type CreateUsersMutation = {
-  createUsers?:  {
-    __typename: "Users",
+export type CreateMemberMutation = {
+  createMember?:  {
+    __typename: "Member",
     id: string,
     name: string,
     createdAt: string,
@@ -164,14 +164,14 @@ export type CreateUsersMutation = {
   } | null,
 };
 
-export type UpdateUsersMutationVariables = {
-  input: UpdateUsersInput,
-  condition?: ModelUsersConditionInput | null,
+export type UpdateMemberMutationVariables = {
+  input: UpdateMemberInput,
+  condition?: ModelMemberConditionInput | null,
 };
 
-export type UpdateUsersMutation = {
-  updateUsers?:  {
-    __typename: "Users",
+export type UpdateMemberMutation = {
+  updateMember?:  {
+    __typename: "Member",
     id: string,
     name: string,
     createdAt: string,
@@ -180,14 +180,14 @@ export type UpdateUsersMutation = {
   } | null,
 };
 
-export type DeleteUsersMutationVariables = {
-  input: DeleteUsersInput,
-  condition?: ModelUsersConditionInput | null,
+export type DeleteMemberMutationVariables = {
+  input: DeleteMemberInput,
+  condition?: ModelMemberConditionInput | null,
 };
 
-export type DeleteUsersMutation = {
-  deleteUsers?:  {
-    __typename: "Users",
+export type DeleteMemberMutation = {
+  deleteMember?:  {
+    __typename: "Member",
     id: string,
     name: string,
     createdAt: string,
@@ -196,13 +196,13 @@ export type DeleteUsersMutation = {
   } | null,
 };
 
-export type GetUsersQueryVariables = {
+export type GetMemberQueryVariables = {
   id: string,
 };
 
-export type GetUsersQuery = {
-  getUsers?:  {
-    __typename: "Users",
+export type GetMemberQuery = {
+  getMember?:  {
+    __typename: "Member",
     id: string,
     name: string,
     createdAt: string,
@@ -211,17 +211,17 @@ export type GetUsersQuery = {
   } | null,
 };
 
-export type ListUsersQueryVariables = {
-  filter?: ModelUsersFilterInput | null,
+export type ListMembersQueryVariables = {
+  filter?: ModelMemberFilterInput | null,
   limit?: number | null,
   nextToken?: string | null,
 };
 
-export type ListUsersQuery = {
-  listUsers?:  {
-    __typename: "ModelUsersConnection",
+export type ListMembersQuery = {
+  listMembers?:  {
+    __typename: "ModelMemberConnection",
     items:  Array< {
-      __typename: "Users",
+      __typename: "Member",
       id: string,
       name: string,
       createdAt: string,
@@ -232,14 +232,14 @@ export type ListUsersQuery = {
   } | null,
 };
 
-export type OnCreateUsersSubscriptionVariables = {
-  filter?: ModelSubscriptionUsersFilterInput | null,
+export type OnCreateMemberSubscriptionVariables = {
+  filter?: ModelSubscriptionMemberFilterInput | null,
   owner?: string | null,
 };
 
-export type OnCreateUsersSubscription = {
-  onCreateUsers?:  {
-    __typename: "Users",
+export type OnCreateMemberSubscription = {
+  onCreateMember?:  {
+    __typename: "Member",
     id: string,
     name: string,
     createdAt: string,
@@ -248,14 +248,14 @@ export type OnCreateUsersSubscription = {
   } | null,
 };
 
-export type OnUpdateUsersSubscriptionVariables = {
-  filter?: ModelSubscriptionUsersFilterInput | null,
+export type OnUpdateMemberSubscriptionVariables = {
+  filter?: ModelSubscriptionMemberFilterInput | null,
   owner?: string | null,
 };
 
-export type OnUpdateUsersSubscription = {
-  onUpdateUsers?:  {
-    __typename: "Users",
+export type OnUpdateMemberSubscription = {
+  onUpdateMember?:  {
+    __typename: "Member",
     id: string,
     name: string,
     createdAt: string,
@@ -264,14 +264,14 @@ export type OnUpdateUsersSubscription = {
   } | null,
 };
 
-export type OnDeleteUsersSubscriptionVariables = {
-  filter?: ModelSubscriptionUsersFilterInput | null,
+export type OnDeleteMemberSubscriptionVariables = {
+  filter?: ModelSubscriptionMemberFilterInput | null,
   owner?: string | null,
 };
 
-export type OnDeleteUsersSubscription = {
-  onDeleteUsers?:  {
-    __typename: "Users",
+export type OnDeleteMemberSubscription = {
+  onDeleteMember?:  {
+    __typename: "Member",
     id: string,
     name: string,
     createdAt: string,

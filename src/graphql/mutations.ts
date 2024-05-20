@@ -2,17 +2,17 @@
 /* eslint-disable */
 // this is an auto generated file. This will be overwritten
 
-import * as APITypes from "../../awsAPIs";
+import * as APITypes from "../awsAPIs";
 type GeneratedMutation<InputType, OutputType> = string & {
   __generatedMutationInput: InputType;
   __generatedMutationOutput: OutputType;
 };
 
-export const createUsers = /* GraphQL */ `mutation CreateUsers(
-  $input: CreateUsersInput!
-  $condition: ModelUsersConditionInput
+export const createMember = /* GraphQL */ `mutation CreateMember(
+  $input: CreateMemberInput!
+  $condition: ModelMemberConditionInput
 ) {
-  createUsers(input: $input, condition: $condition) {
+  createMember(input: $input, condition: $condition) {
     id
     name
     createdAt
@@ -22,14 +22,14 @@ export const createUsers = /* GraphQL */ `mutation CreateUsers(
   }
 }
 ` as GeneratedMutation<
-  APITypes.CreateUsersMutationVariables,
-  APITypes.CreateUsersMutation
+  APITypes.CreateMemberMutationVariables,
+  APITypes.CreateMemberMutation
 >;
-export const updateUsers = /* GraphQL */ `mutation UpdateUsers(
-  $input: UpdateUsersInput!
-  $condition: ModelUsersConditionInput
+export const updateMember = /* GraphQL */ `mutation UpdateMember(
+  $input: UpdateMemberInput!
+  $condition: ModelMemberConditionInput
 ) {
-  updateUsers(input: $input, condition: $condition) {
+  updateMember(input: $input, condition: $condition) {
     id
     name
     createdAt
@@ -39,14 +39,14 @@ export const updateUsers = /* GraphQL */ `mutation UpdateUsers(
   }
 }
 ` as GeneratedMutation<
-  APITypes.UpdateUsersMutationVariables,
-  APITypes.UpdateUsersMutation
+  APITypes.UpdateMemberMutationVariables,
+  APITypes.UpdateMemberMutation
 >;
-export const deleteUsers = /* GraphQL */ `mutation DeleteUsers(
-  $input: DeleteUsersInput!
-  $condition: ModelUsersConditionInput
+export const deleteMember = /* GraphQL */ `mutation DeleteMember(
+  $input: DeleteMemberInput!
+  $condition: ModelMemberConditionInput
 ) {
-  deleteUsers(input: $input, condition: $condition) {
+  deleteMember(input: $input, condition: $condition) {
     id
     name
     createdAt
@@ -56,6 +56,6 @@ export const deleteUsers = /* GraphQL */ `mutation DeleteUsers(
   }
 }
 ` as GeneratedMutation<
-  APITypes.DeleteUsersMutationVariables,
-  APITypes.DeleteUsersMutation
+  APITypes.DeleteMemberMutationVariables,
+  APITypes.DeleteMemberMutation
 >;
