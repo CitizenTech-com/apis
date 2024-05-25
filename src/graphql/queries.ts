@@ -12,6 +12,7 @@ export const getMember = /* GraphQL */ `query GetMember($id: ID!) {
   getMember(id: $id) {
     id
     name
+    email
     createdAt
     updatedAt
     owner
@@ -28,6 +29,7 @@ export const listMembers = /* GraphQL */ `query ListMembers(
     items {
       id
       name
+      email
       createdAt
       updatedAt
       owner

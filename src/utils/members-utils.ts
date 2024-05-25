@@ -4,9 +4,8 @@ import { Member } from "../awsAPIs";
 export const getMemberFromRequest = (input: any): Member => {
   try {
     if (!isEmpty(input)) return input as Member;
-  } catch (error) {
     return null;
-  } finally {
+  } catch (error) {
     return null;
   }
 };

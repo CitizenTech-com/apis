@@ -1,8 +1,3 @@
-import { Router } from "express";
-import { MembersRoutes } from "../constants";
-import { registerMember } from "../controllers/members-controller";
-import { getMemberFromRequest } from "../utils/members-utils";
-
 /**
  * @swagger
  * components:
@@ -37,20 +32,6 @@ import { getMemberFromRequest } from "../utils/members-utils";
  *         finished: false
  *         createdAt: 2020-03-10T04:05:06.157Z
  */
-const memberRoutes = Router();
+const sampleRoutes = Router();
 
-memberRoutes.post(MembersRoutes.REGISTER_USER, (req, res) => {
-  const memberToRegister = getMemberFromRequest(req.body);
-
-  console.log("memberToRegister: ", memberToRegister);
-
-  if (memberToRegister) {
-    registerMember(memberToRegister).then((registeredMember) =>
-      res.status(200).json(registeredMember)
-    );
-  } else {
-    res.status(400).send("Invalid user details, unable to register user.");
-  }
-});
-
-export default memberRoutes;
+sampleRoutes.post("/", (req, res) => {});

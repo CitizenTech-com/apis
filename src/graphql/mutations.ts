@@ -15,6 +15,7 @@ export const createMember = /* GraphQL */ `mutation CreateMember(
   createMember(input: $input, condition: $condition) {
     id
     name
+    email
     createdAt
     updatedAt
     owner
@@ -32,6 +33,7 @@ export const updateMember = /* GraphQL */ `mutation UpdateMember(
   updateMember(input: $input, condition: $condition) {
     id
     name
+    email
     createdAt
     updatedAt
     owner
@@ -49,6 +51,7 @@ export const deleteMember = /* GraphQL */ `mutation DeleteMember(
   deleteMember(input: $input, condition: $condition) {
     id
     name
+    email
     createdAt
     updatedAt
     owner

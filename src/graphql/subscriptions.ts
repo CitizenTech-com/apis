@@ -15,6 +15,7 @@ export const onCreateMember = /* GraphQL */ `subscription OnCreateMember(
   onCreateMember(filter: $filter, owner: $owner) {
     id
     name
+    email
     createdAt
     updatedAt
     owner
@@ -32,6 +33,7 @@ export const onUpdateMember = /* GraphQL */ `subscription OnUpdateMember(
   onUpdateMember(filter: $filter, owner: $owner) {
     id
     name
+    email
     createdAt
     updatedAt
     owner
@@ -49,6 +51,7 @@ export const onDeleteMember = /* GraphQL */ `subscription OnDeleteMember(
   onDeleteMember(filter: $filter, owner: $owner) {
     id
     name
+    email
     createdAt
     updatedAt
     owner

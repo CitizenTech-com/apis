@@ -5,10 +5,12 @@
 export type CreateMemberInput = {
   id?: string | null,
   name: string,
+  email: string,
 };
 
 export type ModelMemberConditionInput = {
   name?: ModelStringInput | null,
+  email?: ModelStringInput | null,
   and?: Array< ModelMemberConditionInput | null > | null,
   or?: Array< ModelMemberConditionInput | null > | null,
   not?: ModelMemberConditionInput | null,
@@ -61,6 +63,7 @@ export type Member = {
   __typename: "Member",
   id: string,
   name: string,
+  email: string,
   createdAt: string,
   updatedAt: string,
   owner?: string | null,
@@ -69,6 +72,7 @@ export type Member = {
 export type UpdateMemberInput = {
   id: string,
   name?: string | null,
+  email?: string | null,
 };
 
 export type DeleteMemberInput = {
@@ -78,6 +82,7 @@ export type DeleteMemberInput = {
 export type ModelMemberFilterInput = {
   id?: ModelIDInput | null,
   name?: ModelStringInput | null,
+  email?: ModelStringInput | null,
   createdAt?: ModelStringInput | null,
   updatedAt?: ModelStringInput | null,
   and?: Array< ModelMemberFilterInput | null > | null,
@@ -111,6 +116,7 @@ export type ModelMemberConnection = {
 export type ModelSubscriptionMemberFilterInput = {
   id?: ModelSubscriptionIDInput | null,
   name?: ModelSubscriptionStringInput | null,
+  email?: ModelSubscriptionStringInput | null,
   createdAt?: ModelSubscriptionStringInput | null,
   updatedAt?: ModelSubscriptionStringInput | null,
   and?: Array< ModelSubscriptionMemberFilterInput | null > | null,
@@ -158,6 +164,7 @@ export type CreateMemberMutation = {
     __typename: "Member",
     id: string,
     name: string,
+    email: string,
     createdAt: string,
     updatedAt: string,
     owner?: string | null,
@@ -174,6 +181,7 @@ export type UpdateMemberMutation = {
     __typename: "Member",
     id: string,
     name: string,
+    email: string,
     createdAt: string,
     updatedAt: string,
     owner?: string | null,
@@ -190,6 +198,7 @@ export type DeleteMemberMutation = {
     __typename: "Member",
     id: string,
     name: string,
+    email: string,
     createdAt: string,
     updatedAt: string,
     owner?: string | null,
@@ -205,6 +214,7 @@ export type GetMemberQuery = {
     __typename: "Member",
     id: string,
     name: string,
+    email: string,
     createdAt: string,
     updatedAt: string,
     owner?: string | null,
@@ -224,6 +234,7 @@ export type ListMembersQuery = {
       __typename: "Member",
       id: string,
       name: string,
+      email: string,
       createdAt: string,
       updatedAt: string,
       owner?: string | null,
@@ -242,6 +253,7 @@ export type OnCreateMemberSubscription = {
     __typename: "Member",
     id: string,
     name: string,
+    email: string,
     createdAt: string,
     updatedAt: string,
     owner?: string | null,
@@ -258,6 +270,7 @@ export type OnUpdateMemberSubscription = {
     __typename: "Member",
     id: string,
     name: string,
+    email: string,
     createdAt: string,
     updatedAt: string,
     owner?: string | null,
@@ -274,6 +287,7 @@ export type OnDeleteMemberSubscription = {
     __typename: "Member",
     id: string,
     name: string,
+    email: string,
     createdAt: string,
     updatedAt: string,
     owner?: string | null,
