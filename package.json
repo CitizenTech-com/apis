@@ -7,7 +7,7 @@
     "debug": "nodemon --exec \"node --inspect-brk=0.0.0.0:9229 --require ts-node/register src/app.ts\"",
     "start": "ts-node src/index.ts",
     "build": "tsc",
-    "serve": "node dist/index.js"
+    "serve": "node ./dist/index.js"
   },
   "keywords": [],
   "author": "",
