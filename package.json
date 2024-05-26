@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "debug": "nodemon --exec \"node --inspect-brk=0.0.0.0:9229 --require ts-node/register src/app.ts\"",
-    "start": "ts-node src/index.ts",
+    "start": "nodemon index.js",
     "build": "tsc",
     "serve": "node dist/index.js"
   },
@@ -15,6 +15,7 @@
   "dependencies": {
     "express": "^4.19.2",
     "lodash": "^4.17.21",
+    "nodemon": "^3.1.1",
     "swagger-jsdoc": "^6.2.8",
     "swagger-ui-express": "^5.0.0"
   },
