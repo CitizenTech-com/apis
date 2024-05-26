@@ -1,6 +1,0 @@
-type Member @model @auth(rules: [{allow: private}, {allow: owner}]) {
-  id: ID!
-  name: String!
-  email: String!
-}
- 
