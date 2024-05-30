@@ -17,6 +17,7 @@
     "lodash": "^4.17.21",
     "swagger-jsdoc": "^6.2.8",
     "swagger-ui-express": "^5.0.0",
+    "stytch": "^10.16.0",
     "ts-node": "^10.9.2"
   },
   "devDependencies": {
