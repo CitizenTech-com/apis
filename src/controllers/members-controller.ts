@@ -2,6 +2,8 @@ import { RequestHandler } from "express";
 import stytchClient from "../stytchClient";
 import { Member, LoginRequest } from "../types";
 import { MEMBERS } from "../constants";
+import { db } from "../db/setup";
+import { users } from "../db/schema/user";
 
 export const getAllUsers: RequestHandler = async (req, res) => {
   try {
@@ -59,14 +61,12 @@ export const register: RequestHandler = async (req, res) => {
     });
 
     if (stytchresponse.status_code === 200) {
-      MEMBERS.push({
+      await db.insert(users).values({
+        name: fullName,
         email: email,
-        password: password,
-        fullName: fullName,
-        address: address,
         phone: phone,
+        address: address,
         postCode: postCode,
-        confirmPassword: confirmPassword,
       });
 
       return res.status(201).json({
