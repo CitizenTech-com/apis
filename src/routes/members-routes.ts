@@ -1,6 +1,6 @@
 import { Router } from "express";
 import { MembersRoutes } from "../constants";
-import { signUp, login } from "../controllers/members-controller";
+import { register, login, getAllUsers } from "../controllers/members-controller";
 
 /**
  * @swagger
@@ -40,6 +40,7 @@ import { signUp, login } from "../controllers/members-controller";
 
 const userRouter = Router();
 
-userRouter.post(MembersRoutes.REGISTER_USER, signUp);
+userRouter.get(MembersRoutes.GET_ALL_USERS, getAllUsers);
+userRouter.post(MembersRoutes.REGISTER_USER, register);
 userRouter.post(MembersRoutes.LOGIN_USER, login); 
 export default userRouter ;
