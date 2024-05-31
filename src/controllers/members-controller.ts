@@ -4,7 +4,7 @@ import { Name } from "stytch";
 import { User, LoginRequest } from "../types";
 
 export const signUp: RequestHandler = async (req, res) => {
-  const { first_name, email, password, last_name }: User = req.body;
+  const {  email, password}: User = req.body;
 
   if (!email || !password) {
     return res
@@ -14,7 +14,6 @@ export const signUp: RequestHandler = async (req, res) => {
 
   try {
     const stytchresponse = await stytchClient.passwords.create({
-      name: { first_name, last_name },
       email: email,
       password: password,
       session_duration_minutes: 527040,
