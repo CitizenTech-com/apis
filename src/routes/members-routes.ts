@@ -1,5 +1,6 @@
 import { Router } from "express";
 import { MembersRoutes } from "../constants";
+import { register, login, getAllUsers } from "../controllers/members-controller";
 
 /**
  * @swagger
@@ -35,17 +36,11 @@ import { MembersRoutes } from "../constants";
  *         finished: false
  *         createdAt: 2020-03-10T04:05:06.157Z
  */
-const memberRoutes = Router();
 
-memberRoutes.post(MembersRoutes.REGISTER_USER, (req, res) => {
-  const memberToRegister = req.body;
 
-  console.log("memberToRegister: ", memberToRegister);
+const userRouter = Router();
 
-  if (memberToRegister) {
-  } else {
-    res.status(400).send("Invalid user details, unable to register user.");
-  }
-});
-
-export default memberRoutes;
+userRouter.get(MembersRoutes.GET_ALL_USERS, getAllUsers);
+userRouter.post(MembersRoutes.REGISTER_USER, register);
+userRouter.post(MembersRoutes.LOGIN_USER, login); 
+export default userRouter ;

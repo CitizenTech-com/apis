@@ -6,15 +6,25 @@
   "scripts": {
     "debug": "nodemon --exec \"node --inspect-brk=0.0.0.0:9229 --require ts-node/register src/app.ts\"",
     "start": "ts-node src/index.ts",
+    "dev": "nodemon src/index.ts",
     "build": "tsc",
-    "serve": "node dist/index.js"
+    "generate": "npx drizzle-kit generate --config=drizzle.config.ts",
+    "push": "drizzle-kit push",
+    "migrate": "npx drizzle-kit migrate",
+    "studio": "npx drizzle-kit studio",
+    "seed": "ts-node src/db/seed.ts"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "express": "^4.19.2",
+    "@types/pg": "^8.11.6",
+    "drizzle-kit": "^0.21.4",
+    "drizzle-orm": "^0.30.10",
     "lodash": "^4.17.21",
+    "nodemon": "^3.1.2",
+    "pg": "^8.11.5",
+    "stytch": "^10.16.0",
     "swagger-jsdoc": "^6.2.8",
     "swagger-ui-express": "^5.0.0",
     "ts-node": "^10.9.2"

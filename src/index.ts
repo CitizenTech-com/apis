@@ -1,7 +1,7 @@
 import express, { Request, Response, NextFunction } from "express";
 import swaggerUi from "swagger-ui-express";
 import swaggerJsdoc from "swagger-jsdoc";
-import memberRoutes from "./routes/members.routes";
+import memberRoutes from "./routes/members-routes";
 
 const options = {
   definition: {
